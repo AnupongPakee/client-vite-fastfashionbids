@@ -1,0 +1,167 @@
+.container-register {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+}
+
+.content-register {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.content-register .menu {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.content-register .menu a {
+    font-family: "Megrim", system-ui;
+    font-size: 2rem;
+    background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 47%, rgba(255, 158, 177, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-register .menu a:hover {
+    scale: 1.1;
+}
+
+.content-register .image-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.content-register .image-right img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px);
+    z-index: 0;
+}
+
+.content-register .image-right h1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    text-transform: uppercase;
+    width: 25rem;
+    height: 15rem;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.content-register .form-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.content-register .form-left input {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.content-register .form-left input::placeholder {
+    opacity: 50%;
+    color: #fff;
+}
+
+.content-register .form-left i {
+    font-size: 1.2rem;
+}
+
+.content-register .form-left .username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 1.6rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-register .form-left .username:hover {
+    border-color: rgba(255, 158, 177, 1);
+}
+
+.content-register .form-left .password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 1.6rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-register .form-left .password:hover {
+    border-color: rgba(255, 158, 177, 1);
+}
+
+.content-register .form-left .email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 1.6rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-register .form-left .email:hover {
+    border-color: rgba(255, 158, 177, 1);
+}
+
+.content-register .form-left .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+}
+
+.content-register .form-left .button button {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 2rem;
+    background: none;
+    border: 1px solid #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-register .form-left .button button:hover {
+    border-color: rgba(255, 158, 177, 1);
+}

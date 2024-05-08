@@ -1,0 +1,319 @@
+.container-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+}
+
+.content-products {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    border: 1px solid #fff;
+}
+
+.content-products .text-exchange {
+    position: absolute;
+    top: -2.6rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-products .text-exchange h1 {
+    width: 16rem;
+    background-color: #111;
+}
+
+.content-products .show-exchange {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.content-products .show-exchange::-webkit-scrollbar {
+    display: none;
+}
+
+.content-products .show-exchange .box {
+    position: relative;
+    width: 280px;
+    height: 300px;
+    margin-top: 4rem;
+}
+
+.content-products .show-exchange .image-exchange {
+    width: 100%;
+    height: 40%;
+}
+
+.content-products .show-exchange .image-exchange img {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    padding: 0;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.content-products .show-exchange .image-exchange img:hover {
+    scale: 1.1;
+    border: none;
+    border-radius: 0;
+}
+
+.content-products .show-exchange .detail {
+    width: 100%;
+    height: 40%;
+}
+
+.content-products .show-exchange .detail .type {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+}
+
+.content-products .show-exchange .detail .type p {
+    border: 1px solid #fff;
+    padding: 0.2rem 0.8rem;
+}
+
+.content-products .show-exchange .detail .type p:last-child {
+    background: none;
+    border: none;
+}
+
+.content-products .show-exchange .exchange-name {
+    width: 100%;
+    height: 15%;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.content-products .show-exchange .exchange-name a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-products .show-exchange .exchange-name a:hover {
+    background-color: rgba(255, 0, 157, 0.4);
+}
+
+.content-products #search {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 2rem;
+    right: 6rem;
+    height: 2rem;
+    border-bottom: 1px solid #fff;
+    z-index: 2;
+}
+
+.content-products #search input[type = "search"] {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.content-products .fa-sliders {
+    position: absolute;
+    font-size: 2rem;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-products .fa-sliders:hover {
+    color: rgba(255, 158, 177, 1);
+}
+
+.content-products .show-exchange .option {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 0;
+    transition: width 2s;
+}
+
+.content-products .show-exchange input[type = "checkbox"] {
+    display: none;
+}
+
+.content-products .show-exchange .option .sex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content-products .show-exchange .option .content-sex {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 50%;
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+
+.content-products .show-exchange .option .content-sex h3 {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    padding: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content-products .show-exchange .option .content-sex i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-products .show-exchange .option .content-sex i:hover {
+    scale: 1.1 !important;
+    color: #111 !important;
+    background-color: #fff !important;
+}
+
+.content-products .show-exchange .option .part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content-products .show-exchange .option .content-part {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 50%;
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.content-products .show-exchange .option .content-part h3 {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    padding: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content-products .show-exchange .option .content-part h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 6rem;
+    height: 2.6rem;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-products .show-exchange .option .content-part h4:hover {
+    scale: 1.1 !important;
+    color: #111 !important;
+    background-color: #fff !important;
+}
+
+.content-products .show-exchange .option .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content-products .show-exchange .option .content-size {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 50%;
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.content-products .show-exchange .option .content-size h3 {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    padding: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content-products .show-exchange .option .content-size label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 2.6rem;
+    height: 2rem;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-products .show-exchange .option .content-size label:hover {
+    scale: 1.1 !important;
+    color: #111 !important;
+    background-color: #fff !important;
+}

@@ -1,0 +1,274 @@
+.container-exchange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+}
+
+.container-exchange .menu {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.container-exchange .exchange {
+    width: 100%;
+    height: 100%;
+}
+
+.content-exchange {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.content-exchange .tool-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+.content-exchange .content-tool {
+    width: 100%;
+}
+
+.content-exchange .content-tool .box {
+    font-size: 1.6rem;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 40px;
+    border: 1px solid #fff;
+    border-left: none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow: hidden;
+}
+
+.content-exchange .content-tool .box a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.content-exchange .show-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    background-color: #111;
+}
+
+.content-exchange .show-products .content-show {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    padding-top: 50px;
+    border: 1px solid #fff;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.content-exchange .show-products .content-show::-webkit-scrollbar {
+    display: none;
+}
+
+.content-exchange .show-products .box-add-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 300px;
+    border: 1px solid #fff;
+}
+
+.content-exchange .show-products .box-add-product i {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-exchange .show-products .box-add-product i:hover {
+    background-color: #fff !important;
+    color: #111 !important;
+}
+
+.content-exchange .show-products .box {
+    width: 280px;
+    height: 300px;
+}
+
+.content-show .image-exchange {
+    position: relative;
+    width: 100%;
+    height: 40%;
+}
+
+.content-show .image-exchange i {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1.6rem;  
+    border: 1px solid #fff;
+    background-color: #111;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    z-index: 2;
+}
+
+.content-show .image-exchange i:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+.content-show .image-exchange img {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    padding: 0;
+    border: 1px solid #fff;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.content-show .detail {
+    width: 100%;
+    height: 40%;
+}
+
+.content-show .detail .type {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+}
+
+.content-show .detail .type p {
+    border: 1px solid #fff;
+    padding: 0.2rem 0.8rem;
+}
+
+.content-show .detail .type p:last-child {
+    background: none;
+    border: none;
+}
+
+.content-show .exchange-name {
+    width: 100%;
+    height: 15%;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.content-show .exchange-name p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-exchange .show-products .content-show .form-add-product {
+    position: absolute;
+    top: 0;
+    width: 0%;
+    height: 134%;
+    background-color: rgba(0, 0, 0, 1);
+    transition: width 2s;
+    z-index: 5;
+}
+
+.content-exchange .show-products .content-show .form-add-product input {
+    width: 140px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+}
+
+.content-exchange .show-products .content-show .form-add-product input[type = "file"] {
+    display: none;
+}
+
+.content-exchange .show-products .content-show .form-add-product input::placeholder {
+    opacity: 50%;
+    color: #fff;
+}
+
+.content-exchange .show-products .content-show .form-add-product form {
+    display: none;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.content-exchange .show-products .content-show .form-add-product .label {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.content-exchange .show-products .content-show .form-add-product .want {
+    display: flex;
+    align-items: flex-start;
+    height: 100px;
+}
+
+.content-exchange .show-products .content-show .form-add-product .label i {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-exchange .show-products .content-show .form-add-product .label i:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+.content-exchange .show-products .content-show .form-add-product .label select {
+    border: none;
+    background-color: rgba(0, 0, 0, 1);
+    border-bottom: 1px solid #fff;
+    outline: none;
+}
