@@ -35,6 +35,7 @@ function Index() {
           <div className="content-index">
             <div className="content">
               <div className="bg-index">
+                <a href="https://www.freepik.com/free-ai-image/fast-fashion-concept-with-full-clothing-store_72616783.htm#query=clothes%20display&position=0&from_view=keyword&track=ais_user&uuid=5d7021a2-fd65-492f-84b6-e91f15c4c785">Ref: https://www.freepik.com/free-ai-image/fast-fashion-concept-with-full-clothing-store_72616783.htm#query=clothes%20display&position=0&from_view=keyword&track=ais_user&uuid=5d7021a2-fd65-492f-84b6-e91f15c4c785</a>
                 <h1 className="text-head">
                   Welcome To FastFashion Bids <br /> You Can {" "}
                   <span>

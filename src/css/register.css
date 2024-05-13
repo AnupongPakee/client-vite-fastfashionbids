@@ -71,6 +71,15 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.content-register .image-right a {
+    position: absolute;
+    text-align: left;
+    padding-left: 20px;
+    bottom: 10px;
+    opacity: 50%;
+    z-index: 1;
+}
+
 .content-register .form-left {
     display: flex;
     justify-content: center;

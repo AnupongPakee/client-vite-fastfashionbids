@@ -38,7 +38,7 @@ function Menuauth() {
   return (
     <div className="container-menu-auth">
       <div className="content-menu-auth">
-        <NavLink to={"/home"} className="web-name">
+        <NavLink to={"/home/" + params.id} className="web-name">
           FastFashion Bids
         </NavLink>
         <div className="nav-text">
@@ -51,7 +51,7 @@ function Menuauth() {
           <NavLink style={ActiveLink} to={"/exchange/" + params.id}>
             Exchange
           </NavLink>
-          <NavLink style={ActiveLink} to={"/about/" + params.id}>
+          <NavLink style={ActiveLink} to={"/about"}>
             About
           </NavLink>
         </div>

@@ -32,15 +32,14 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (form.username == "admin" && form.password == "0000") {
-      navigate("/admin");
-    }
     login(form)
       .then((res) => {
         if (res.data.message == "no user found") {
           alert("No User Found");
         } else if (res.data.message == "login failed") {
           alert("Wrong Password");
+        } else if (res.data.message == "adminlogin success") {
+          navigate("/admin/" + res.data.id)
         } else {
           navigate("/home/" + res.data.id);
         }
@@ -75,6 +74,7 @@ function Login() {
           <div className="image-left">
             <img src={image} alt="Image-Login" />
             <h1>Login</h1>
+            <a href="https://www.freepik.com/free-ai-image/fast-fashion-concept-with-full-clothing-store_72616791.htm">Ref: https://www.freepik.com/free-ai-image/fast-fashion-concept-with-full-clothing-store_72616791.htm</a>
           </div>
           <div className="form-right">
             <form onSubmit={handleSubmit}>

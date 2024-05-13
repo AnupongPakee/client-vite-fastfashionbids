@@ -8,12 +8,14 @@ import { getExchange } from "../../api/exchange";
 
 // Import Package
 import { HashLoader } from "react-spinners";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 function Products() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
+  const params =  useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -30,7 +32,6 @@ function Products() {
       })
       .catch((err) => console.log(err));
   };
-
 
   let state = 0;
   const option = (active) => {
@@ -136,6 +137,14 @@ function Products() {
       document.getElementById("label-xl").style.scale = "1";
     }
   };
+
+  const checkauth = (id_exchange, id) => {
+    if (id != undefined) {
+      navigate("/view/exchange/" + id_exchange + "/" + id)
+    } else {
+      navigate("/view/exchange/" + id_exchange + "/no-login")
+    }
+  }
 
   return (
     <div className="container-products">
@@ -267,7 +276,7 @@ function Products() {
                       </div>
                     </div>
                     <div className="exchange-name">
-                      <Link to={"/view/exchange"}>{item.exchange_name}</Link>
+                      <button onClick={() => checkauth(item.id_exchange, params.id)}>{item.exchange_name}</button>
                     </div>
                   </div>
                 );

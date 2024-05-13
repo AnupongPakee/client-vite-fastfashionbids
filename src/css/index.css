@@ -33,6 +33,7 @@
 }
 
 .content-index .bg-index {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +43,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.content-index .bg-index a {
+    text-align: left;
+    position: absolute;
+    padding-left: 20px;
+    bottom: 10px;
+    opacity: 50%;
 }
 
 .content-index .bg-index .text-head {

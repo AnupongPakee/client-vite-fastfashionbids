@@ -40,6 +40,10 @@ function Register() {
           if (res.data.message == "success") {
             alert("Register Success");
             navigate("/home/" + res.data.id);
+          } else if (res.data.message == "haved username") {
+            alert("Already have a username?");
+          } else if (res.data.message == "haved email") {
+            alert("Already have an email?");
           } else {
             alert("Error");
           }
@@ -173,6 +177,7 @@ function Register() {
           <div className="image-right">
             <img src={image} alt="Image-Login" />
             <h1>Register</h1>
+            <a href="https://www.freepik.com/free-ai-image/fast-fashion-concept-with-piles-clothes_72616134.htm">Ref: https://www.freepik.com/free-ai-image/fast-fashion-concept-with-piles-clothes_72616134.htm</a>
           </div>
         </div>
       )}

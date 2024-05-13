@@ -6,3 +6,38 @@
     height: 100vh;
     background-color: #111;
 }
+
+.content-about {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content-about .door-left {
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    animation: door-left 3s;
+}
+
+@keyframes door-left {
+    from {width: 50%;}
+}
+
+.content-about .door-right {
+    position: absolute;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    /* background-color: violet; */
+    animation: door-right 3s;
+}
+
+@keyframes door-right {
+    from {width: 50%;}
+}

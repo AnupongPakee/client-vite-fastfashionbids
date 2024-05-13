@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+// Import Data
 import { read, update } from "../../api/user";
 
 // Import Style Css
@@ -15,7 +16,7 @@ import { useNavigate, useParams } from "react-router-dom";
 function Profile() {
   const [loading, setLoading] = useState(false);
   const [fileold, setFileOld] = useState();
-  const [form, setForm] = useState({});
+  // const [form, setForm] = useState({});
   const [data, setData] = useState({
     img: "",
     fname: "",
@@ -44,14 +45,14 @@ function Profile() {
   };
 
   const handleChange = (e) => {
-    if (e.target.name === "img") {
-      setForm({
-        ...form,
+    if (e.target.name == "img") {
+      setData({
+        ...data,
         [e.target.name]: e.target.files[0],
       });
     } else {
-      setForm({
-        ...form,
+      setData({
+        ...data,
         [e.target.name]: e.target.value,
       });
     }
@@ -60,22 +61,18 @@ function Profile() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formWithImage = new FormData();
-    for (const key in form) {
-      formWithImage.append(key, form[key]);
+    for (const key in data) {
+      formWithImage.append(key, data[key]);
     }
     formWithImage.append("img", fileold);
-    if (form.password != form.passwordconfirm) {
-      alert("Wrong Password");
-    } else {
-      update(params.id, formWithImage).then((res) => {
-        if (res.data.message == "success") {
-          alert("Edit Profile Success");
-          navigate("/home/" + params.id);
-        } else {
-          alert("Error");
-        }
-      });
-    }
+    update(params.id, formWithImage).then((res) => {
+      if (res.data.message == "success") {
+        alert("Edit Profile Success");
+        navigate("/home/" + params.id);
+      } else {
+        alert("Error");
+      }
+    });
   };
 
   const cancel = (active) => {

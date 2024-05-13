@@ -22,10 +22,10 @@ function Menu() {
           <NavLink style={ActiveLink} to={"/"}>
             Home
           </NavLink>
-          <NavLink style={ActiveLink} to={"/auction"}>
+          <NavLink style={ActiveLink} to={"/login"}>
             Auction
           </NavLink>
-          <NavLink style={ActiveLink} to={"/exchane"}>
+          <NavLink style={ActiveLink} to={"/login"}>
             Exchange
           </NavLink>
           <NavLink style={ActiveLink} to={"/about"}>

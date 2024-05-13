@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+// Import Data
 import { readExchange, addExchange, deleteExchange } from "../../api/exchange";
 
 // Import Style Css
@@ -38,7 +39,7 @@ function Exchange() {
   };
 
   const handleChange = (e) => {
-    if (e.target.name === "exchange_img") {
+    if (e.target.name == "exchange_img") {
       setForm({
         ...form,
         [e.target.name]: e.target.files[0],

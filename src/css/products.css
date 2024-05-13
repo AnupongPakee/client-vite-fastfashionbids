@@ -107,7 +107,7 @@
     overflow: hidden;
 }
 
-.content-products .show-exchange .exchange-name a {
+.content-products .show-exchange .exchange-name button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,7 +117,7 @@
     transition: all 0.4s ease-in-out;
 }
 
-.content-products .show-exchange .exchange-name a:hover {
+.content-products .show-exchange .exchange-name button:hover {
     background-color: rgba(255, 0, 157, 0.4);
 }
 

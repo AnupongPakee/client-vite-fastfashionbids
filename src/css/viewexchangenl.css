@@ -1,0 +1,28 @@
+.container-view-exchange-nl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+}
+
+.container-view-exchange-nl .menu {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.container-view-exchange-nl .view-exchange-nl {
+    width: 100%;
+    height: 100%;
+}
+
+.content-view-exchange-nl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}

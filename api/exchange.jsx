@@ -7,6 +7,10 @@ export const readExchange = async (id) => {
   return await axios.get(import.meta.env.VITE_API_MYSQL + "/" + id + "/exchange")
 }
 
+export const viewExchange = async (id_ex, id) => {
+  return await axios.get(import.meta.env.VITE_API_MYSQL + "/exchange/" + id_ex + "/" + id)
+}
+
 export const addExchange = async (id, data) =>
   await axios.post(
     import.meta.env.VITE_API_MYSQL + "/" + id + "/addexchange",

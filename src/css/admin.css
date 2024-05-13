@@ -1,0 +1,106 @@
+.container-admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+}
+
+.container-admin .menu {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.container-admin .content-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.container-admin .content-menu h1 {
+    font-family: "Megrim", system-ui;
+    font-size: 2rem;
+    background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 47%, rgba(255, 158, 177, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container-admin .admin {
+    width: 100%;
+    height: 100%;
+}
+
+.content-admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content-admin .list-name {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    width: 80%;
+    height: 80%;
+    border: 1px solid #fff;
+}
+
+.content-admin .list-name .box {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border: 1px solid #fff;
+    margin-top: 30px;
+}
+
+
+.content-admin .list-name .box .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.content-admin .list-name .box .image img {
+    width: 40%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.content-admin .list-name .box .text .flname {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.content-admin .list-name .box .text {
+    text-align: left;
+}
+
+.content-admin .list-name .box .text h3 {
+    padding-left: 20px;
+}
+
+.content-admin .list-name button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: #ab1313;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-admin .list-name button:hover {
+    background-color: #ff3333;
+}
