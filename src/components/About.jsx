@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 
+import Mrnu from "../assets/images/mrnu.jpg";
+import Okbook from "../assets/images/okbook.png";
+
 // Import Style CSS
 import "../css/about.css";
 
@@ -21,9 +24,32 @@ function About() {
         <HashLoader color="#d636d5" />
       ) : (
         <div className="content-about">
-          <h1>In Development</h1>
           <div className="door-left"></div>
           <div className="door-right"></div>
+          <div className="fontend">
+            <div className="image">
+              <img src={Mrnu} alt="Image_Mrnu" />
+            </div>
+            <div className="name">
+              <h2>อนุพงศ์ ภาคี</h2>
+              <h2>( Anupong Pakee )</h2>
+            </div> <br />
+            <div className="position">
+              <h3>Fontend</h3>
+            </div>
+          </div>
+          <div className="backend">
+            <div className="image">
+              <img src={Okbook} alt="Image_Okbook" />
+            </div>
+            <div className="name">
+              <h2>ชลสิทธิ๋ ธรรมจักษ์</h2>
+              <h2>( Chonlasit Thammajak )</h2>
+            </div> <br />
+            <div className="position">
+              <h3>Backend</h3>
+            </div>
+          </div>
         </div>
       )}
     </div>

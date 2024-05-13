@@ -49,44 +49,39 @@ function Viewexchange() {
               </div>
               <div className="line-width">
                 <div className="line"></div>
-              </div>
-              <div className="title-name">
-                <h1>{data.exchange_name}</h1>
+              </div>{" "}
+              <br />
+              <div className="text">
+                <h2>{data.exchange_name}</h2>
               </div>
               <div className="detail">
-                <div className="text">
-                  <h3>Part: {data.typename}</h3>
-                  <h3>Sex: {data.sexname}</h3>
-                  <h3>Size: {data.sizes}</h3>
-                  <h3>Detail: {data.exchange_detail}</h3>
+                <div className="content-detail">
+                  <h4>Part: {data.typename}</h4>
+                  <h4>Size: {data.sizes}</h4>
+                  <h4>Sex: {data.sexname}</h4>
+                  <h4>Detail: {data.exchange_detail}</h4>
                 </div>
-              </div>
+              </div>{" "}
+              <br />
+              <button>Exchange</button>
             </div>
             <div className="detail-right">
               <div className="list-name">
                 <div className="name">
                   <h3>List Name</h3>
                   <div className="list">
-                    <div className="name1">
-                      <p>1 .Anupong</p>
-                    </div>
-                    <div className="name1">
-                      <p>2. Okbook</p>
-                    </div>
-                    <div className="name1">
-                      <p>3. Mrnu</p>
-                    </div>
-                    <div className="name1">
-                      <p>4. OhNooooo</p>
-                    </div>
+                    <p>1. Anu</p>
+                    <p>2. Cho</p>
                   </div>
                 </div>
               </div>
               <div className="line-width">
                 <div className="line"></div>
-              </div> <br />
-              <h3>Comment</h3>
-              <div className="comment"></div>
+              </div>{" "}
+              <br />
+              <div className="comment">
+                <h2>Comment</h2>
+              </div>
             </div>
           </div>
         </div>
