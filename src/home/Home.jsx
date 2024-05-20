@@ -40,7 +40,7 @@ function Home() {
                   Welcome To FastFashion Bids <br /> You Can{" "}
                   <span>
                     <Typewriter
-                      words={["Auction", "Exchange"]}
+                      words={["Exchange"]}
                       loop={false}
                       cursor
                       cursorStyle="|"
