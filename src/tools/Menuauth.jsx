@@ -32,7 +32,7 @@ function Menuauth() {
 
   const ActiveLink = ({ isActive }) => {
     return {
-      color: isActive ? "#00ff80" : "#fff",
+      color: isActive ? "#cc527a" : "#edeae5",
     };
   };
   return (
@@ -45,14 +45,14 @@ function Menuauth() {
           <NavLink style={ActiveLink} to={"/home/" + params.id}>
             Home
           </NavLink>
-          <NavLink style={ActiveLink} to={"/auction/" + params.id}>
+          {/* <NavLink style={ActiveLink} to={"/auction/" + params.id}>
             Auction
-          </NavLink>
+          </NavLink> */}
           <NavLink style={ActiveLink} to={"/exchange/" + params.id}>
             Exchange
           </NavLink>
-          <NavLink style={ActiveLink} to={"/about"}>
-            About
+          <NavLink style={ActiveLink} to={"/my/store/" + params.id}>
+            My Store
           </NavLink>
         </div>
         <div className="editprofile">

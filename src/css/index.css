@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #111;
+    background-color: #edeae5;
 }
 
 .container-index .menu {
@@ -39,7 +39,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 50%, rgba(17, 17, 17, 1) 100%), url("../assets/images/home.jpg");
+    background-image: url("../assets/images/home.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,6 +47,8 @@
 
 .content-index .bg-index a {
     text-align: left;
+    font-weight: 200;
+    color: #edeae5;
     position: absolute;
     padding-left: 20px;
     bottom: 10px;
@@ -54,12 +56,13 @@
 }
 
 .content-index .bg-index .text-head {
-    font-family: "Poiret One", sans-serif;
-    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    color: #edeae5;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .content-index .bg-index .text-head span {
-    color: #00ff80;
+    color: #e8175d;
 }

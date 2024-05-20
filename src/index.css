@@ -1,16 +1,6 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #111;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #edeae5;
+  color: #edeae5;
 }
 
 * {
@@ -18,9 +8,7 @@
 }
 
 a {
-  font-family: "Poiret One", sans-serif;
-  font-weight: bold;
-  color: #fff;
+  font-family: "Quicksand", sans-serif;
   text-decoration: inherit;
 }
 
@@ -35,33 +23,40 @@ h1 {
 }
 
 button {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Quicksand", sans-serif;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1rem;
   font-weight: 500;
+  color: #edeae5;
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+button[type="reset"] {
+  background-color: #e8175d;
+  transition: all 0.4s ease-in-out;
+}
+
+button[type="reset"]:hover {
+  background-color: #cc527a;
+}
+
+button[type="submit"] {
+  transition: all 0.4s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #00b300;
+}
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

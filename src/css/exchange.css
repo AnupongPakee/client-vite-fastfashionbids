@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #111;
+    background-color: #edeae5;
 }
 
 .container-exchange .menu {
@@ -20,7 +20,10 @@
 }
 
 .content-exchange {
+    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
@@ -31,6 +34,7 @@
     align-items: center;
     width: 30%;
     height: 100%;
+    background-color: #edeae5;
 }
 
 .content-exchange .content-tool {
@@ -42,7 +46,7 @@
     width: 100%;
     height: 50px;
     margin-bottom: 40px;
-    border: 1px solid #fff;
+    border: 1px solid #111;
     border-left: none;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -54,7 +58,14 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    color: #edeae5;
     padding-left: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-exchange .content-tool .box a:hover {
+    background-color: #e8175d !important;
+    color: #edeae5 !important;
 }
 
 .content-exchange .show-products {
@@ -63,7 +74,7 @@
     align-items: center;
     width: 70%;
     height: 100%;
-    background-color: #111;
+    background-color: #edeae5;
 }
 
 .content-exchange .show-products .content-show {
@@ -73,10 +84,10 @@
     gap: 50px;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 90%;
     height: 80%;
     padding-top: 50px;
-    border: 1px solid #fff;
+    border: 1px solid #111;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -91,7 +102,9 @@
     align-items: center;
     width: 280px;
     height: 300px;
-    border: 1px solid #fff;
+    padding: 1rem;
+    border: 1px solid #111;
+    box-shadow: #111 0px 20px 30px -10px;
 }
 
 .content-exchange .show-products .box-add-product i {
@@ -101,20 +114,24 @@
     align-items: center;
     width: 100px;
     height: 100px;
-    border: 1px solid #fff;
+    color: #111;
+    border: 1px solid #111;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
 
 .content-exchange .show-products .box-add-product i:hover {
-    background-color: #fff !important;
-    color: #111 !important;
+    background-color: #111 !important;
+    color: #edeae5 !important;
 }
 
 .content-exchange .show-products .box {
     width: 280px;
     height: 300px;
+    background-color: #111;
+    padding: 1rem;
+    box-shadow: #111 0px 20px 30px -10px;
 }
 
 .content-show .image-exchange {
@@ -132,8 +149,8 @@
     align-items: center;
     width: 30px;
     height: 30px;
-    font-size: 1.6rem;  
-    border: 1px solid #fff;
+    font-size: 1.6rem;
+    border: 1px solid #edeae5;
     background-color: #111;
     border-radius: 50%;
     transition: all 0.4s ease-in-out;
@@ -141,7 +158,7 @@
 }
 
 .content-show .image-exchange i:hover {
-    background-color: #fff;
+    background-color: #edeae5;
     color: #111;
 }
 
@@ -150,7 +167,7 @@
     width: 90%;
     height: 90%;
     padding: 0;
-    border: 1px solid #fff;
+    border: 1px solid #edeae5;
     object-fit: cover;
     transition: all 0.5s ease-in-out;
 }
@@ -169,7 +186,7 @@
 }
 
 .content-show .detail .type p {
-    border: 1px solid #fff;
+    border: 1px solid #edeae5;
     padding: 0.2rem 0.8rem;
 }
 
@@ -181,13 +198,13 @@
 .content-show .exchange-name {
     width: 100%;
     height: 15%;
-    border: 1px solid #fff;
+    border: 1px solid #edeae5;
     color: #fff;
     border-radius: 2rem;
     overflow: hidden;
 }
 
-.content-show .exchange-name p {
+.content-show .exchange-name button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,12 +213,18 @@
     transition: all 0.4s ease-in-out;
 }
 
+.content-show .exchange-name button:hover {
+    background-color: #e8175d;
+    font-weight: bold;
+}
+
 .content-exchange .show-products .content-show .form-add-product {
     position: absolute;
     top: 0;
     width: 0%;
     height: 134%;
-    background-color: rgba(0, 0, 0, 1);
+    color: #111;
+    background-color: rgba(237,234,229, 1);
     transition: width 2s;
     z-index: 5;
 }
@@ -210,17 +233,19 @@
     width: 140px;
     background: none;
     border: none;
-    border-bottom: 1px solid #fff;
+    color: #111;
+    font-weight: bold;
+    border-bottom: 1px solid #111;
     outline: none;
 }
 
-.content-exchange .show-products .content-show .form-add-product input[type = "file"] {
+.content-exchange .show-products .content-show .form-add-product input[type="file"] {
     display: none;
 }
 
 .content-exchange .show-products .content-show .form-add-product input::placeholder {
     opacity: 50%;
-    color: #fff;
+    color: #111;
 }
 
 .content-exchange .show-products .content-show .form-add-product form {
@@ -233,6 +258,11 @@
     padding-top: 50px;
     opacity: 0;
     transition: opacity 3s;
+}
+
+.content-exchange .show-products .content-show .form-add-product label {
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 .content-exchange .show-products .content-show .form-add-product .label {
@@ -255,20 +285,205 @@
     align-items: center;
     width: 100px;
     height: 100px;
-    border: 1px solid #fff;
+    border: 1px solid #111;
     cursor: pointer;
     border-radius: 1rem;
     transition: all 0.4s ease-in-out;
 }
 
 .content-exchange .show-products .content-show .form-add-product .label i:hover {
-    background-color: #fff;
+    background-color: #111;
+    color: #edeae5;
+}
+
+.content-exchange .view-list-name {
+    position: absolute;
+    display: none;
+    width: 0%;
+    height: 100%;
+    background-color: #edeae5;
+    z-index: 3;
+}
+
+.content-exchange .view-list-name i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: #111;
+    border: 1px solid #111;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-exchange .view-list-name i:hover {
+    background-color: #111;
+    color: #edeae5;
+}
+
+.content-exchange .view-list-name .view-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.content-exchange .view-list-name .view-left .content-view {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    border: 1px solid #111;
+}
+
+.content-exchange .view-list-name .view-left .view {
+    position: relative;
+    display: none;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    border: 1px solid #111;
+}
+
+.content-exchange .view-list-name .view-left .view .h3-view {
+    position: absolute;
+    top: -15px;
+    width: 120px;
+    background-color: #edeae5;
+}
+
+.content-exchange .view-list-name .view-left .view .box {
+    display: flex;
+    width: 100%;
+    height: 97%;
+    margin-top: 20px;
+}
+
+.content-exchange .view-list-name .view-left .view .detail {
+    width: 100%;
+    height: 100%;
+}
+
+.content-exchange .view-list-name .view-left .view .detail .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content-exchange .view-list-name .view-left .view .detail .image img {
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #edeae5;
+}
+
+.content-exchange .view-list-name .view-left .view .detail .type-name {
+    text-align: left;
+    padding-left: 30px;
+}
+
+.content-exchange .view-list-name .view-left .view .detail .button-select {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-exchange .view-list-name .view-left .view .detail .button-select:hover {
+    background-color: #00b300;
+}
+
+.content-exchange .view-list-name .view-left .view .detail .button-cancel {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-exchange .view-list-name .view-left .content-view h3 {
+    position: absolute;
+    top: -15px;
+    width: 140px;
+    font-weight: bold;
+    background-color: #edeae5;
     color: #111;
 }
 
-.content-exchange .show-products .content-show .form-add-product .label select {
-    border: none;
-    background-color: rgba(0, 0, 0, 1);
-    border-bottom: 1px solid #fff;
-    outline: none;
+.content-exchange .view-list-name .view-left .content-view .list-comment {
+    position: absolute;
+    left: 0;
+    display: grid;
+    grid-template-columns: auto;
+    height: 20px;
+    margin-top:20px;
+    padding-left: 20px;
+}
+
+.content-exchange .view-list-name .view-left .content-view .list-comment p {
+    color: #111;
+    font-weight: 400;
+}
+
+.content-exchange .view-list-name .list-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.content-exchange .view-list-name .list-right .content-list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    border: 1px solid #111;
+}
+
+.content-exchange .view-list-name .list-right .content-list h3 {
+    position: absolute;
+    top: -15px;
+    width: 140px;
+    color: #111;
+    font-weight: bold;
+    background-color: #edeae5;
+}
+
+.content-exchange .view-list-name .list-right .content-list .list-name {
+    position: relative;
+    left: 0;
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    height: 40px;
+    margin-top:20px;
+}
+
+.content-exchange .view-list-name .list-right .content-list .list-name h2 {
+    color: #111;
+    font-weight: 400;
+}
+
+.content-exchange .view-list-name .list-right .content-list .list-name .name-button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.content-exchange .view-list-name .list-right .content-list .list-name .name-button button {
+    transition: all 0.4s ease-in-out;
+}
+
+.content-exchange .view-list-name .list-right .content-list .list-name .name-button button:hover {
+    background-color: #00b300;
 }

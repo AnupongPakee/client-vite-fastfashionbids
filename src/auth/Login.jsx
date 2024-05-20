@@ -65,7 +65,7 @@ function Login() {
   return (
     <div className="container-login">
       {loading ? (
-        <HashLoader color="#d636d5" />
+        <HashLoader color="#e8175d" />
       ) : (
         <div className="content-login">
           <div className="menu">

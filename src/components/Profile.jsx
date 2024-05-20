@@ -46,6 +46,10 @@ function Profile() {
 
   const handleChange = (e) => {
     if (e.target.name == "img") {
+      if (e.target.value != undefined) {
+        document.getElementById("Img").style.display = "none";
+        document.getElementById("fa-image").style.display = "flex";
+      }
       setData({
         ...data,
         [e.target.name]: e.target.files[0],
@@ -83,7 +87,7 @@ function Profile() {
   return (
     <div className="container-profile">
       {loading ? (
-        <HashLoader color="#d636d5" />
+        <HashLoader color="#e8175d" />
       ) : (
         <div className="profile">
           <div className="menu">
@@ -97,7 +101,8 @@ function Profile() {
               <br /> <br />
               <div className="image">
                 <label htmlFor="img">
-                  <img src={data.img} alt="Image-Profile" />
+                  <img src={data.img} alt="Image-Profile" id="Img"/>
+                  <i className="fa-solid fa-image" id="fa-image"></i>
                 </label>
                 <input
                   type="file"
@@ -158,8 +163,8 @@ function Profile() {
               </div>{" "}
               <br /> <br />
               <div className="button-cancel-submit">
-                <button onClick={() => cancel(true)}>Cancel</button>
-                <button type="submit">Done</button>
+                <button type="reset" onClick={() => cancel(true)} className="cancel">Cancel</button>
+                <button type="submit" className="sum">Done</button>
               </div>
             </form>
           </div>

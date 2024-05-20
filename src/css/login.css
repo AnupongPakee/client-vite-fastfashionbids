@@ -5,7 +5,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #111;
+    background-color: #edeae5;
 }
 
 .content-login {
@@ -28,7 +28,9 @@
 }
 
 .content-login .menu a {
-    font-family: "Megrim", system-ui;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
     font-size: 2rem;
     background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 47%, rgba(255, 158, 177, 1) 100%);
     background-clip: text;
@@ -65,6 +67,7 @@
     justify-content: center;
     align-items: center;
     font-size: 5rem;
+    font-weight: 400;
     text-transform: uppercase;
     width: 25rem;
     height: 15rem;
@@ -73,6 +76,8 @@
 
 .content-login .image-left a {
     position: absolute;
+    font-weight: 100;
+    color: #edeae5;
     text-align: left;
     padding-left: 20px;
     bottom: 10px;
@@ -90,6 +95,8 @@
 
 .content-login .form-right input {
     font-size: 1.2rem;
+    font-weight: bold;
+    color: #111;
     width: 100%;
     height: 100%;
     padding-left: 10px;
@@ -100,10 +107,11 @@
 
 .content-login .form-right input::placeholder {
     opacity: 50%;
-    color: #fff;
+    color: #111;
 }
 
 .content-login .form-right i {
+    color: #111;
     font-size: 1.2rem;
 }
 
@@ -114,12 +122,12 @@
     width: 20rem;
     height: 1.6rem;
     padding-bottom: 5px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #111;
     transition: all 0.4s ease-in-out;
 }
 
 .content-login .form-right .username:hover {
-    border-color: rgba(255, 158, 177, 1);
+    border-color: #e8175d
 }
 
 .content-login .form-right .password {
@@ -129,12 +137,12 @@
     width: 20rem;
     height: 1.6rem;
     padding-bottom: 5px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #111;
     transition: all 0.4s ease-in-out;
 }
 
 .content-login .form-right .password:hover {
-    border-color: rgba(255, 158, 177, 1);
+    border-color: #e8175d;
 }
 
 .content-login .form-right .button {
@@ -146,18 +154,20 @@
 
 .content-login .form-right .button button {
     font-size: 1.2rem;
+    letter-spacing: 0.1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 6rem;
     height: 2rem;
+    color: #111;
     background: none;
-    border: 1px solid #fff;
+    border: 1px solid #111;
     transition: all 0.4s ease-in-out;
 }
 
 .content-login .form-right .button button:hover {
-    border-color: rgba(255, 158, 177, 1);
+    border-color: #e8175d;
 }
 
 .content-login .width-line {
@@ -169,7 +179,7 @@
 .content-login .line {
     width: 80%;
     height: 1px;
-    background-color: #fff;
+    background-color: #111;
 }
 
 .content-login .link-sign-up {
@@ -180,14 +190,18 @@
 
 .content-login .link-sign-up p {
     font-size: 0.6rem;
+    font-weight: bold;
+    color: #111;
 }
 
 .content-login .link-sign-up a {
     font-size: 0.6rem;
+    font-weight: bold;
     text-decoration: none;
+    color: #cc527a;
     transition: all 0.4s ease-in-out;
 }
 
 .content-login .link-sign-up a:hover {
-    color: rgba(255, 158, 177, 1);
+    color: #e8175d
 }

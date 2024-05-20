@@ -1,7 +1,7 @@
 .container-menu-auth {
     width: 100%;
     height: 5rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .content-menu-auth {
@@ -13,21 +13,29 @@
 }
 
 .content-menu-auth a {
-    font-family: "Poiret One", sans-serif;
-    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
     font-size: 1rem;
     letter-spacing: 0.1rem;
-    color: #fff;
     transition: all 0.3s ease-in-out;
 }
 
 .content-menu-auth a:hover {
-    color: rgba(255, 158, 177, 1) !important;
+    color: #e8175d !important;
     scale: 1.1;
 }
 
+.content-menu-auth i {
+    color: #edeae5;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-menu-auth i:hover {
+    color: #e8175d;
+}
+
 .content-menu-auth .web-name {
-    font-family: "Megrim", system-ui;
+    font-family: "Quicksand", sans-serif;
     font-size: 2rem;
     background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 47%, rgba(255, 158, 177, 1) 100%);
     background-clip: text;

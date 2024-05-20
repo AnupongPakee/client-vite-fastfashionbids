@@ -14,9 +14,8 @@ import Exchange from "./components/Exchange";
 import Mystore from "./components/Mystore";
 import Auction from "./components/Auction";
 import Profile from "./components/Profile";
-import About from "./components/About";
 import Viewexchange from "./components/Viewexchange";
-import Viewexchangenl from "./components/Viewechangenl";
+import Viewexchangenl from "./components/Viewexchangenl";
 
 function App() {
   return (
@@ -31,7 +30,6 @@ function App() {
         <Route path="/exchange/:id" element={<Exchange />} />
         <Route path="/auction/:id" element={<Auction />} />
         <Route path="/my/store/:id" element={<Mystore />} />
-        <Route path="/about" element={<About />} />
         <Route path="/view/exchange/:id_ex/:id" element={<Viewexchange />} />
         <Route path="/view/exchange/:id_ex/no-login" element={<Viewexchangenl />} />
       </Routes>

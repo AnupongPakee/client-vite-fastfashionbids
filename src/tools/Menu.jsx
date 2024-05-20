@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 function Menu() {
   const ActiveLink = ({ isActive }) => {
     return {
-      color: isActive ? "#00ff80" : "#fff",
+      color: isActive ? "#cc527a" : "#edeae5",
     };
   };
   return (
@@ -22,14 +22,14 @@ function Menu() {
           <NavLink style={ActiveLink} to={"/"}>
             Home
           </NavLink>
-          <NavLink style={ActiveLink} to={"/login"}>
+          {/* <NavLink style={ActiveLink} to={"/login"}>
             Auction
-          </NavLink>
+          </NavLink> */}
           <NavLink style={ActiveLink} to={"/login"}>
             Exchange
           </NavLink>
-          <NavLink style={ActiveLink} to={"/about"}>
-            About
+          <NavLink style={ActiveLink} to={"/login"}>
+            My Store
           </NavLink>
         </div>
         <div className="sign-in-up">

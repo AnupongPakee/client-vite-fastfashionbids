@@ -26,7 +26,7 @@ function Index() {
   return (
     <div className="container-index">
       {loading ? (
-        <HashLoader color="#d636d5" />
+        <HashLoader color="#e8175d" />
       ) : (
         <div className="index">
           <div className="menu">
@@ -35,7 +35,7 @@ function Index() {
           <div className="content-index">
             <div className="content">
               <div className="bg-index">
-                <a href="https://www.freepik.com/free-ai-image/fast-fashion-concept-with-full-clothing-store_72616783.htm#query=clothes%20display&position=0&from_view=keyword&track=ais_user&uuid=5d7021a2-fd65-492f-84b6-e91f15c4c785">Ref: https://www.freepik.com/free-ai-image/fast-fashion-concept-with-full-clothing-store_72616783.htm#query=clothes%20display&position=0&from_view=keyword&track=ais_user&uuid=5d7021a2-fd65-492f-84b6-e91f15c4c785</a>
+                <a href="https://www.freepik.com/free-ai-image/futuristic-store-with-abstract-concept-architecture_152329534.htm#fromView=search&page=4&position=8&uuid=2b2bcafb-f08c-4825-9c35-f9e79dedf097">Ref: https://www.freepik.com/free-ai-image/futuristic-store-with-abstract-concept-architecture_152329534.htm#fromView=search&page=4&position=8&uuid=2b2bcafb-f08c-4825-9c35-f9e79dedf097</a>
                 <h1 className="text-head">
                   Welcome To FastFashion Bids <br /> You Can {" "}
                   <span>
@@ -44,7 +44,7 @@ function Index() {
                       loop={false}
                       cursor
                       cursorStyle="|"
-                      cursorColor="#00ff80"
+                      cursorColor="#e8175d"
                       typeSpeed={120}
                       deleteSpeed={60}
                     />

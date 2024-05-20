@@ -68,26 +68,27 @@ function Register() {
     }
   };
 
+  let state2 = false;
   const showpassconfirm = () => {
-    if (state) {
+    if (state2) {
       document
         .getElementById("password-confirm")
         .setAttribute("type", "password");
       document.getElementById("eye-slash-cfm").style.display = "none";
       document.getElementById("eye-cfm").style.display = "block";
-      state = false;
+      state2 = false;
     } else {
       document.getElementById("password-confirm").setAttribute("type", "text");
       document.getElementById("eye-slash-cfm").style.display = "block";
       document.getElementById("eye-slash-cfm").style.color = "#acacac";
       document.getElementById("eye-cfm").style.display = "none";
-      state = true;
+      state2 = true;
     }
   };
   return (
     <div className="container-register">
       {loading ? (
-        <HashLoader color="#d636d5" />
+        <HashLoader color="#e8175d" />
       ) : (
         <div className="content-register">
           <div className="menu">
@@ -177,7 +178,10 @@ function Register() {
           <div className="image-right">
             <img src={image} alt="Image-Login" />
             <h1>Register</h1>
-            <a href="https://www.freepik.com/free-ai-image/fast-fashion-concept-with-piles-clothes_72616134.htm">Ref: https://www.freepik.com/free-ai-image/fast-fashion-concept-with-piles-clothes_72616134.htm</a>
+            <a href="https://www.freepik.com/free-ai-image/fast-fashion-concept-with-piles-clothes_72616134.htm">
+              Ref:
+              https://www.freepik.com/free-ai-image/fast-fashion-concept-with-piles-clothes_72616134.htm
+            </a>
           </div>
         </div>
       )}

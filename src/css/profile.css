@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #111;
+    background-color: #edeae5;
 }
 
 .container-profile .menu {
@@ -25,43 +25,77 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    background-color: #edeae5;
+}
+
+.content-profile form {
+    padding: 2rem;
+    border: 1px solid #111;
+    box-shadow: #111 0px 20px 30px -10px;
+}
+
+.content-profile .text-head h1 {
+    color: #111;
 }
 
 .content-profile input {
     width: 150px;
     height: 20px;
+    color: #111;
+    font-weight: bold;
     background: none;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #111;
     outline: none;
 }
 
-.content-profile input[type = "file"] {
+.content-profile input[type="file"] {
     display: none;
+}
+
+.content-profile .image {
+    display: flex;
+    justify-content: center;
 }
 
 .content-profile .image img {
     width: 150px;
     height: 150px;
+    border: 2px solid #111;
     border-radius: 50%;
     cursor: pointer;
     object-fit: cover;
+}
+
+.content-profile .image i {
+    display: none;
+    font-size: 6rem;
+    color: #111;
+    cursor: pointer;
+}
+
+.content-profile label {
+    font-weight: bold;
 }
 
 .content-profile .name {
     display: flex;
     justify-content: space-between;
     width: 600px;
+    color: #111;
 }
 
 .content-profile .tel-addr {
     display: flex;
     justify-content: space-between;
     width: 600px;
+    color: #111;
 }
 
 .content-profile .tel-addr textarea {
-    font-family: "Poiret One", sans-serif;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    color: #111;
     letter-spacing: 0.2rem;
     width: 150px;
     height: 60px;

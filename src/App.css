@@ -40,37 +40,44 @@
 }
 
 p {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
   letter-spacing: 0.2rem;
 }
 
 h1 {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
   letter-spacing: 0.2rem;
 }
 
 h2 {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
   letter-spacing: 0.2rem;
 }
 
 h3 {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
   letter-spacing: 0.2rem;
 }
 
 h4 {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
   letter-spacing: 0.2rem;
 }
 
 label {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
   letter-spacing: 0.2rem;
 }
 
 input {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
   letter-spacing: 0.2rem;
 }
 
@@ -83,7 +90,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #F1F1F1;
-  -webkit-box-shadow: 0 0 0px 1000px #1111 inset;
+  -webkit-text-fill-color: #111;
+  -webkit-box-shadow: 0 0 0px 1000px #edeae5 inset;
   transition: background-color 5000s ease-in-out 0s;
 }

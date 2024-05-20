@@ -10,7 +10,7 @@ import "../css/viewexchangenl.css";
 import { HashLoader } from "react-spinners";
 import { useParams } from "react-router-dom";
 
-function Viewechangenl() {
+function Viewexchangenl() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function Viewechangenl() {
   return (
     <div className="container-view-exchange-nl">
       {loading ? (
-        <HashLoader color="#d636d5" />
+        <HashLoader color="#e8175d" />
       ) : (
         <div className="view-exchange-nl">
           <div className="menu">
@@ -39,4 +39,4 @@ function Viewechangenl() {
   );
 }
 
-export default Viewechangenl;
+export default Viewexchangenl;

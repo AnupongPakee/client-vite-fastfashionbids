@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #111;
+    background-color: #edeae5;
 }
 
 .container-mystore .menu {
@@ -31,6 +31,7 @@
     align-items: center;
     width: 30%;
     height: 100%;
+    background-color: #edeae5;
 }
 
 .content-mystore .content-tool {
@@ -42,7 +43,7 @@
     width: 100%;
     height: 50px;
     margin-bottom: 40px;
-    border: 1px solid #fff;
+    border: 1px solid #111;
     border-left: none;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -54,7 +55,14 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    color: #a8a7a7;
     padding-left: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-mystore .content-tool .box a:hover {
+    background-color: #e8175d !important;
+    color: #edeae5 !important;
 }
 
 .content-mystore .show-products {
@@ -63,7 +71,7 @@
     align-items: center;
     width: 70%;
     height: 100%;
-    background-color: #111;
+    background-color: #edeae5;
 }
 
 .content-mystore .show-products .content-show {
@@ -73,10 +81,10 @@
     gap: 50px;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 90%;
     height: 80%;
     padding-top: 50px;
-    border: 1px solid #fff;
+    border: 1px solid #111;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -91,7 +99,9 @@
     align-items: center;
     width: 280px;
     height: 300px;
-    border: 1px solid #fff;
+    padding: 1rem;
+    border: 1px solid #111;
+    box-shadow: #111 0px 20px 30px -10px;
 }
 
 .content-mystore .show-products .box-add-product i {
@@ -101,20 +111,24 @@
     align-items: center;
     width: 100px;
     height: 100px;
-    border: 1px solid #fff;
+    color: #111;
+    border: 1px solid #111;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
 
 .content-mystore .show-products .box-add-product i:hover {
-    background-color: #fff !important;
-    color: #111 !important;
+    background-color: #111 !important;
+    color: #edeae5 !important;
 }
 
 .content-mystore .show-products .box {
     width: 280px;
     height: 300px;
+    background-color: #111;
+    padding: 1rem;
+    box-shadow: #111 0px 20px 30px -10px;
 }
 
 .content-show .image-mystore {
@@ -128,7 +142,7 @@
     width: 90%;
     height: 90%;
     padding: 0;
-    border: 1px solid #fff;
+    border: 1px solid #edeae5;
     object-fit: cover;
     transition: all 0.5s ease-in-out;
 }
@@ -143,7 +157,7 @@
     width: 30px;
     height: 30px;
     font-size: 1.6rem;  
-    border: 1px solid #fff;
+    border: 1px solid #edeae5;
     background-color: #111;
     border-radius: 50%;
     transition: all 0.4s ease-in-out;
@@ -151,7 +165,7 @@
 }
 
 .content-show .image-mystore i:hover {
-    background-color: #fff;
+    background-color: #edeae5;
     color: #111;
 }
 
@@ -169,7 +183,7 @@
 }
 
 .content-show .detail .type p {
-    border: 1px solid #fff;
+    border: 1px solid #edeae5;
     padding: 0.2rem 0.8rem;
 }
 
@@ -181,8 +195,8 @@
 .content-show .mystore-name {
     width: 100%;
     height: 15%;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid #edeae5;
+    color: #edeae5;
     border-radius: 2rem;
     overflow: hidden;
 }
@@ -258,13 +272,6 @@
 .content-mystore .show-products .content-show .form-add-product .label i:hover {
     background-color: #fff;
     color: #111;
-}
-
-.content-mystore .show-products .content-show .form-add-product .label select {
-    border: none;
-    background-color: rgba(0, 0, 0, 1);
-    border-bottom: 1px solid #fff;
-    outline: none;
 }
 
 .content-mystore .show-products .content-show .form-add-product .button-cancel a {

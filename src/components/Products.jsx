@@ -43,7 +43,7 @@ function Products() {
       document.getElementById("option").style.zIndex = "2";
       document.getElementById("option").style.width = "100%";
       document.getElementById("fa-sliders").style.color =
-        "rgba(255, 158, 177, 1)";
+        "#e8175d";
       document.getElementById("content-sex").style.opacity = "1";
       document.getElementById("content-part").style.opacity = "1";
       document.getElementById("content-size").style.opacity = "1";
@@ -149,7 +149,7 @@ function Products() {
   return (
     <div className="container-products">
       {loading ? (
-        <HashLoader color="#d636d5" />
+        <HashLoader color="#e8175d" />
       ) : (
         <div className="content-products">
           <div className="text-exchange">

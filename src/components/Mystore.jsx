@@ -84,8 +84,8 @@ function Mystore() {
 
   const ActiveNavLink = ({ isActive }) => {
     return {
-      backgroundColor: isActive ? "#fff" : "#111",
-      color: isActive ? "#111" : "#fff",
+      backgroundColor: isActive ? "#111" : "#edeae5",
+      color: isActive ? "#edeae5" : "#111",
     };
   };
 
@@ -108,7 +108,7 @@ function Mystore() {
   return (
     <div className="container-mystore">
       {loading ? (
-        <HashLoader color="#d636d5" />
+        <HashLoader color="#e8175d" />
       ) : (
         <div className="mystore">
           <div className="menu">
@@ -122,11 +122,11 @@ function Mystore() {
                     Add Product Exchange
                   </NavLink>
                 </div>
-                <div className="box">
+                {/* <div className="box">
                   <NavLink style={ActiveNavLink} to={"/auction/" + params.id}>
                     Add Product Auction
                   </NavLink>
-                </div>
+                </div> */}
                 <div className="box">
                   <NavLink style={ActiveNavLink} to={"/my/store/" + params.id}>
                     Add Product My Store
