@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 // Import Data
-import { readStore, addStore, deleteStore } from "../../api/store"
+import { readStore, addStore, deleteStore } from "../../api/store";
 
 // Import Style Css
 import "../css/mystore.css";
@@ -25,7 +25,7 @@ function Mystore() {
     setTimeout(() => {
       loadData(params.id);
       setLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   const loadData = () => {
@@ -39,6 +39,10 @@ function Mystore() {
 
   const handleChange = (e) => {
     if (e.target.name === "store_img") {
+      if (e.target.value != undefined) {
+        document.getElementById("fa-image").style.backgroundColor = "#111";
+        document.getElementById("fa-image").style.color = "#edeae5";
+      }
       setForm({
         ...form,
         [e.target.name]: e.target.files[0],
@@ -181,7 +185,7 @@ function Mystore() {
                     </div>
                     <div className="label">
                       <label htmlFor="image">
-                        <i className="fa-solid fa-image"></i>
+                        <i className="fa-solid fa-image" id="fa-image"></i>
                       </label>
                       <input
                         type="file"
@@ -191,6 +195,7 @@ function Mystore() {
                       />
                     </div>
                     <div className="label">
+                      <label htmlFor="id_size">Size:</label>
                       <select
                         name="id_size"
                         id="id_size"
@@ -214,6 +219,7 @@ function Mystore() {
                       </select>
                     </div>
                     <div className="label">
+                      <label htmlFor="id_size">Sex:</label>
                       <select
                         name="id_sex"
                         id="id_sex"
@@ -230,6 +236,7 @@ function Mystore() {
                       </select>
                     </div>
                     <div className="label">
+                      <label htmlFor="id_size">Part:</label>
                       <select
                         name="id_type"
                         id="id_type"
@@ -261,7 +268,7 @@ function Mystore() {
                   return (
                     <div className="box" key={index}>
                       <div className="image-mystore">
-                      <i
+                        <i
                           className="fa-solid fa-xmark"
                           onClick={() => handleRemove(item.id_store)}
                         ></i>

@@ -22,7 +22,7 @@ function Products() {
     setTimeout(() => {
       loadData();
       setLoading(false);
-    }, 4000);
+    }, 2000);
   }, []);
 
   const loadData = () => {
@@ -50,7 +50,7 @@ function Products() {
     } else if (state == 2) {
       document.getElementById("option").style.zIndex = "0";
       document.getElementById("option").style.width = "0%";
-      document.getElementById("fa-sliders").style.color = "#fff";
+      document.getElementById("fa-sliders").style.color = "#111";
       document.getElementById("content-sex").style.opacity = "0";
       document.getElementById("content-part").style.opacity = "0";
       document.getElementById("content-size").style.opacity = "0";
@@ -156,11 +156,11 @@ function Products() {
             <h1>Exchange</h1>
           </div>
           <div className="show-exchange">
-            <i
+            {/* <i
               className="fa-solid fa-sliders"
               id="fa-sliders"
               onClick={() => option(true)}
-            ></i>
+            ></i> */}
             <div id="search">
               <i className="fa-solid fa-magnifying-glass"></i>
               <input

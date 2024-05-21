@@ -25,5 +25,126 @@
     align-items: center;
     width: 100%;
     height: 100%;
+}
+
+.content-view-exchange-nl .line-width {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-view-exchange-nl .line-width .line {
+    width: 70%;
+    height: 2px;
+    background-color: #111;
+}
+
+.content-view-exchange-nl .detail-left {
+    width: 50%;
+    height: 100%;
+}
+
+.content-view-exchange-nl .detail-left .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.content-view-exchange-nl .detail-left .image img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border: 2px solid #111;
+}
+
+.content-view-exchange-nl .detail-left .text h2 {
+    font-weight: bold;
+    color: #111;
+}
+
+.content-view-exchange-nl .detail-left .detail {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: left;
+}
+
+.content-view-exchange-nl .detail-left .detail h4 {
+    color: #111;
+    font-weight: 600;
+}
+
+.content-view-exchange-nl .detail-left .detail .content-detail {
+    width: 80%;
+}
+
+.content-view-exchange-nl .detail-left .btn-exchange {
+    width: 50%;
+    letter-spacing: 0.2rem;
+    background-color: #00b300;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-view-exchange-nl .detail-left .btn-exchange:hover {
+    background-color: #096d0e;
+}
+
+.content-view-exchange-nl .detail-right {
+    width: 50%;
+    height: 100%;
+}
+
+.content-view-exchange-nl .detail-right .list-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.content-view-exchange-nl .detail-right .list-name .name {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    border: 1px solid #111;
+    box-shadow: #111 0px 20px 30px -10px;
+}
+
+.content-view-exchange-nl .detail-right .list-name .name h3 {
+    position: absolute;
+    top: -15px;
+    width: 150px;
+    background-color: #edeae5;
+    color: #111;
+    font-weight: bold;
+}
+
+.content-view-exchange-nl .detail-right .list-name .name .list {
+    display: grid;
+    grid-template-columns: auto;
+    text-align: left;
+    height: 20px;
+    padding-top: 20px;
+}
+
+.content-view-exchange-nl .detail-right .list-name .name .list p {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    color: #111;
+    font-weight: 600;
+}
+
+.content-view-exchange-nl .comment h2 {
+    font-weight: bold;
+    color: #111;
+}
+
+.content-view-exchange-nl .comment h3 {
+    text-align: left;
+    padding-left: 100px;
+    font-weight: bold;
     color: #111;
 }

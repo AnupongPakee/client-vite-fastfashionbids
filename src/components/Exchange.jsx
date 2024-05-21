@@ -31,7 +31,7 @@ function Exchange() {
       loadData(params.id);
       loadListname(params.id);
       setLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   const loadData = () => {

@@ -32,7 +32,7 @@ function Profile() {
     setTimeout(() => {
       loadData(params.id);
       setLoading(false);
-    }, 3000);
+    }, 2000);
   }, [params.id]);
 
   const loadData = (id) => {

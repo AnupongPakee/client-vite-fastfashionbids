@@ -31,7 +31,7 @@ function Viewexchange() {
       loadMystore(id);
       loadListname(id_ex);
       setLoading(false);
-    }, 3000);
+    }, 2000);
   }, [id_ex, id]);
 
   const loadData = (id_ex, id) => {
