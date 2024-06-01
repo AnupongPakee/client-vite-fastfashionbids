@@ -53,6 +53,11 @@
     height: 50%;
 }
 
+.content-view-exchange .detail-left .image a {
+    width: 80%;
+    height: 80%;
+}
+
 .content-view-exchange .detail-left .image img {
     width: 80%;
     height: 80%;
