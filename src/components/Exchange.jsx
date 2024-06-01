@@ -127,7 +127,7 @@ function Exchange() {
   const SendIdstore = (id) => {
     sendId(id)
       .then((res) => {
-        console.log(res.data);
+        alert("Success");
       })
       .catch((err) => console.log(err));
   };
