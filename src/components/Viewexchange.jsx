@@ -129,7 +129,9 @@ function Viewexchange() {
           <div className="content-view-exchange">
             <div className="detail-left">
               <div className="image">
-                <img src={data.exchange_img} alt="Image-Exchange" />
+                <a href={data.exchange_img} target="__blank">
+                  <img src={data.exchange_img} alt="Image-Exchange" />
+                </a>
               </div>
               <div className="line-width">
                 <div className="line"></div>

@@ -196,7 +196,9 @@ function Exchange() {
                   <div className="box">
                     <div className="detail">
                       <div className="image">
-                        <img src={detail.store_img} alt="Image" />
+                        <a href={detail.store_img} target="__blank">
+                          <img src={detail.store_img} alt="Image" />
+                        </a>
                       </div>{" "}
                       <br />
                       <div className="name">
@@ -218,7 +220,10 @@ function Exchange() {
                         >
                           Cancel
                         </button>
-                        <button className="button-select" onClick={() => SendIdstore(detail.id_store)}>
+                        <button
+                          className="button-select"
+                          onClick={() => SendIdstore(detail.id_store)}
+                        >
                           Select
                         </button>
                       </div>
@@ -432,7 +437,9 @@ function Exchange() {
                           className="fa-solid fa-xmark"
                           onClick={() => handleRemove(item.id_exchange)}
                         ></i>
-                        <img src={item.exchange_img} alt="Image-Exchange" />
+                        <a href={item.exchange_img} target="__blank">
+                          <img src={item.exchange_img} alt="Image-Exchange" />
+                        </a>
                       </div>
                       <div className="detail">
                         <div className="type">

@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { viewExchange } from "../../api/exchange";
 import { readList } from "../../api/listexchange";
 
-
 // Import Component
 import Menu from "../tools/Menu";
 
@@ -13,7 +12,7 @@ import "../css/viewexchangenl.css";
 
 // Import Package
 import { HashLoader } from "react-spinners";
-import { NavLink ,useParams, useNavigate } from "react-router-dom";
+import { NavLink, useParams, useNavigate } from "react-router-dom";
 
 function Viewexchangenl() {
   const [loading, setLoading] = useState(false);
@@ -49,7 +48,7 @@ function Viewexchangenl() {
 
   const checklogin = () => {
     navigate("/login");
-  }
+  };
 
   return (
     <div className="container-view-exchange-nl">
@@ -63,7 +62,9 @@ function Viewexchangenl() {
           <div className="content-view-exchange-nl">
             <div className="detail-left">
               <div className="image">
-                <img src={data.exchange_img} alt="Image-Exchange" />
+                <a href={data.exchange_img} target="__blank">
+                  <img src={data.exchange_img} alt="Image-Exchange" />
+                </a>
               </div>
               <div className="line-width">
                 <div className="line"></div>
@@ -81,20 +82,26 @@ function Viewexchangenl() {
                 </div>
               </div>{" "}
               <br />
-              <button className="btn-exchange" id="btn-exchange" onClick={() => checklogin()}>Exchange</button>
+              <button
+                className="btn-exchange"
+                id="btn-exchange"
+                onClick={() => checklogin()}
+              >
+                Exchange
+              </button>
             </div>
             <div className="detail-right">
               <div className="list-name">
                 <div className="name">
                   <h3>List Name</h3>
                   <div className="list">
-                    {
-                      listname.map((item, index) => {
-                        return (
-                          <p key={index}>{index + 1}. {item.fname}{" "}{item.lname}</p>
-                        )
-                      })
-                    }
+                    {listname.map((item, index) => {
+                      return (
+                        <p key={index}>
+                          {index + 1}. {item.fname} {item.lname}
+                        </p>
+                      );
+                    })}
                   </div>
                 </div>
               </div>

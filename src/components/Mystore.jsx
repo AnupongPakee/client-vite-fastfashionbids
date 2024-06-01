@@ -168,7 +168,7 @@ function Mystore() {
                       />
                     </div>
                     <div className="label">
-                      <label htmlFor="color">Color:</label>
+                      <label htmlFor="color">Color`:</label>
                       <input
                         type="text"
                         name="store_color"
@@ -277,7 +277,9 @@ function Mystore() {
                           className="fa-solid fa-xmark"
                           onClick={() => handleRemove(item.id_store)}
                         ></i>
-                        <img src={item.store_img} alt="Image-mystore" />
+                        <a href={item.store_img} target="__blank">
+                          <img src={item.store_img} alt="Image-mystore" />
+                        </a>
                       </div>
                       <div className="detail">
                         <div className="type">

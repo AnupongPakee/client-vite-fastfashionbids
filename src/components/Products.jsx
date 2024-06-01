@@ -14,7 +14,7 @@ function Products() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
-  const params =  useParams();
+  const params = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -42,8 +42,7 @@ function Products() {
     if (state == 1) {
       document.getElementById("option").style.zIndex = "2";
       document.getElementById("option").style.width = "100%";
-      document.getElementById("fa-sliders").style.color =
-        "#e8175d";
+      document.getElementById("fa-sliders").style.color = "#e8175d";
       document.getElementById("content-sex").style.opacity = "1";
       document.getElementById("content-part").style.opacity = "1";
       document.getElementById("content-size").style.opacity = "1";
@@ -140,11 +139,11 @@ function Products() {
 
   const checkauth = (id_exchange, id) => {
     if (id != undefined) {
-      navigate("/view/exchange/" + id_exchange + "/" + id)
+      navigate("/view/exchange/" + id_exchange + "/" + id);
     } else {
-      navigate("/view/exchange/" + id_exchange + "/no-login")
+      navigate("/view/exchange/" + id_exchange + "/no-login");
     }
-  }
+  };
 
   return (
     <div className="container-products">
@@ -265,7 +264,9 @@ function Products() {
                 return (
                   <div className="box" key={index}>
                     <div className="image-exchange">
-                      <img src={item.exchange_img} alt="Image-Exchange" />
+                      <a href={item.exchange_img} target="__blank">
+                        <img src={item.exchange_img} alt="Image-Exchange" />
+                      </a>
                     </div>
                     <div className="detail">
                       <div className="type">
@@ -276,7 +277,11 @@ function Products() {
                       </div>
                     </div>
                     <div className="exchange-name">
-                      <button onClick={() => checkauth(item.id_exchange, params.id)}>{item.exchange_name}</button>
+                      <button
+                        onClick={() => checkauth(item.id_exchange, params.id)}
+                      >
+                        {item.exchange_name}
+                      </button>
                     </div>
                   </div>
                 );
