@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { read } from "../../api/user";
+import { viewProfile } from "../../api/user";
 
 // Import Style Css
 import "../css/menuauth.css";
@@ -23,7 +23,7 @@ function Menuauth() {
   }, [params.id]);
 
   const loadData = (id) => {
-    read(id)
+    viewProfile(id)
       .then((res) => {
         setData(res.data.data[0]);
       })

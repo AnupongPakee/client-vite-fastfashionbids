@@ -16,6 +16,7 @@ import Auction from "./components/Auction";
 import Profile from "./components/Profile";
 import Viewexchange from "./components/Viewexchange";
 import Viewexchangenl from "./components/Viewexchangenl";
+import Status from "./components/Status";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/exchange/:id" element={<Exchange />} />
         <Route path="/auction/:id" element={<Auction />} />
         <Route path="/my/store/:id" element={<Mystore />} />
+        <Route path="/my/status/:id" element={<Status />} />
         <Route path="/view/exchange/:id_ex/:id" element={<Viewexchange />} />
         <Route path="/view/exchange/:id_ex/no-login" element={<Viewexchangenl />} />
       </Routes>

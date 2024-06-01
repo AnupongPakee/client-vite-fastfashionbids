@@ -39,7 +39,7 @@ function Register() {
         .then((res) => {
           if (res.data.message == "success") {
             alert("Register Success");
-            navigate("/home/" + res.data.id);
+            navigate("/edit/profile/" + res.data.id);
           } else if (res.data.message == "haved username") {
             alert("Already have a username?");
           } else if (res.data.message == "haved email") {

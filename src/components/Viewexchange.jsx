@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { viewExchange } from "../../api/exchange";
 import { readStore } from "../../api/store";
 import { addList, readList } from "../../api/listexchange";
+import { addComment, readComment } from "../../api/comment";
 
 // Import Style Css
 import "../css/viewexchange.css";
@@ -22,6 +23,8 @@ function Viewexchange() {
   const [form, setForm] = useState({});
   const [mystore, setMystore] = useState([]);
   const [listname, setListname] = useState([]);
+  const [comment, setComment] = useState({});
+  const [commentxt, setCommentxt] = useState([]);
   const { id_ex, id } = useParams();
 
   useEffect(() => {
@@ -30,6 +33,7 @@ function Viewexchange() {
       loadData(id_ex, id);
       loadMystore(id);
       loadListname(id_ex);
+      loadComment(id_ex);
       setLoading(false);
     }, 2000);
   }, [id_ex, id]);
@@ -58,9 +62,24 @@ function Viewexchange() {
       .catch((err) => console.log(err));
   };
 
+  const loadComment = (id_ex) => {
+    readComment(id_ex)
+      .then((res) => {
+        setCommentxt(res.data.data);
+      })
+      .catch((err) => console.log(err));
+  };
+
   const handleChange = (e) => {
     setForm({
       ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleComment = (e) => {
+    setComment({
+      ...comment,
       [e.target.name]: e.target.value,
     });
   };
@@ -79,6 +98,16 @@ function Viewexchange() {
       .catch((err) => console.log(err));
   };
 
+  const handleSubmitComment = (e) => {
+    e.preventDefault();
+    addComment(id_ex, id, comment)
+      .then((res) => {
+        loadComment(id_ex);
+        console.log("add submit");
+      })
+      .catch((err) => console.log(err));
+  };
+
   const showForm = (check) => {
     if (check == "show") {
       document.getElementById("form").style.display = "flex";
@@ -86,7 +115,8 @@ function Viewexchange() {
     } else if (check == "cancel") {
       document.getElementById("form").style.display = "none";
     }
-  }
+  };
+
   return (
     <div className="container-view-exchange">
       {loading ? (
@@ -120,12 +150,22 @@ function Viewexchange() {
                           </option>
                         );
                       })}
-                    </select> <br />
-                    <p>If you don't have a product yet, add it here{" "}
-                    <NavLink to={"/my/store/" + id}>click</NavLink>
+                    </select>{" "}
+                    <br />
+                    <p>
+                      If you don't have a product yet, add it here{" "}
+                      <NavLink to={"/my/store/" + id}>click</NavLink>
                     </p>
-                    <button className="sum" type="submit">Done</button>
-                    <button className="can" type="reset" onClick={() => showForm("cancel")}>Cancel</button>
+                    <button className="sum" type="submit">
+                      Done
+                    </button>
+                    <button
+                      className="can"
+                      type="reset"
+                      onClick={() => showForm("cancel")}
+                    >
+                      Cancel
+                    </button>
                   </form>
                 </div>
               </div>{" "}
@@ -138,24 +178,31 @@ function Viewexchange() {
                   <h4>Part: {data.typename}</h4>
                   <h4>Size: {data.sizes}</h4>
                   <h4>Sex: {data.sexname}</h4>
+                  <h4>Color: {data.exchange_color}</h4> <br />
                   <h4>Detail: {data.exchange_detail}</h4>
                 </div>
               </div>{" "}
               <br />
-              <button className="btn-exchange" id="btn-exchange" onClick={() => showForm("show")}>Exchange</button>
+              <button
+                className="btn-exchange"
+                id="btn-exchange"
+                onClick={() => showForm("show")}
+              >
+                Exchange
+              </button>
             </div>
             <div className="detail-right">
               <div className="list-name">
                 <div className="name">
                   <h3>List Name</h3>
                   <div className="list">
-                    {
-                      listname.map((item, index) => {
-                        return (
-                          <p key={index}>{index + 1}. {item.fname}{" "}{item.lname}</p>
-                        )
-                      })
-                    }
+                    {listname.map((item, index) => {
+                      return (
+                        <p key={index}>
+                          {index + 1}. {item.fname} {item.lname}
+                        </p>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -165,7 +212,25 @@ function Viewexchange() {
               <br />
               <div className="comment">
                 <h2>Comment</h2>
-                <h3>In Development</h3>
+                {commentxt.map((item, index) => {
+                  return (
+                    <div className="comment-text" key={index}>
+                      <h3>
+                        {item.username}: {item.comment}
+                      </h3>
+                    </div>
+                  );
+                })}
+                <form onSubmit={handleSubmitComment}>
+                  <label htmlFor="comment">Comment: </label>
+                  <input
+                    type="text"
+                    name="comment"
+                    placeholder="Comment"
+                    onChange={(e) => handleComment(e)}
+                    id="comment"
+                  />
+                </form>
               </div>
             </div>
           </div>

@@ -136,6 +136,11 @@ function Mystore() {
                     Add Product My Store
                   </NavLink>
                 </div>
+                <div className="box">
+                  <NavLink style={ActiveNavLink} to={"/my/status/" + params.id}>
+                    Status
+                  </NavLink>
+                </div>
               </div>
             </div>
             <div className="show-products">

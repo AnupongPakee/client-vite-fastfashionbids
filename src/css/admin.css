@@ -44,6 +44,7 @@
 }
 
 .content-admin {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +54,6 @@
 }
 
 .content-admin .list-name {
-    position: relative;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-around;
@@ -71,7 +71,7 @@
     position: absolute;
     width: 220px;
     background-color: #edeae5;
-    top: 170px;
+    top: 90px;
     z-index: 1;
 }
 

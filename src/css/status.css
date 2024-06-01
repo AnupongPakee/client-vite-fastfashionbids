@@ -1,0 +1,86 @@
+.container-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #edeae5;
+}
+
+.container-status .menu {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.container-status .status {
+    width: 100%;
+    height: 100%;
+}
+
+.content-status {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content-status .tool-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    background-color: #edeae5;
+}
+
+.content-status .content-tool {
+    width: 100%;
+}
+
+.content-status .content-tool .box {
+    font-size: 1.6rem;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 40px;
+    border: 1px solid #111;
+    border-left: none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow: hidden;
+}
+
+.content-status .content-tool .box a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #edeae5;
+    padding-left: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.content-status .content-tool .box a:hover {
+    background-color: #e8175d !important;
+    color: #edeae5 !important;
+}
+
+.container-status .show-status {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: 80%;
+    text-align: left;
+    background-color: #edeae5;
+    border: 1px solid #111;
+    margin-left: 40px;
+    padding: 20px;
+}
+
+.container-status .show-status p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #111;
+}

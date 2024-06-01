@@ -318,15 +318,17 @@
     border: 1px solid #111;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 2;
     transition: all 0.4s ease-in-out;
 }
 
 .content-exchange .view-list-name i:hover {
-    background-color: #111;
-    color: #edeae5;
+    background-color: #111 !important;
+    color: #edeae5 !important;
 }
 
 .content-exchange .view-list-name .view-left {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -350,13 +352,18 @@
     width: 80%;
     height: 80%;
     border: 1px solid #111;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
-.content-exchange .view-list-name .view-left .view .h3-view {
+.content-exchange .view-list-name .view-left .h3-view {
     position: absolute;
-    top: -15px;
-    width: 120px;
+    top: 46px;
+    width: 500px;
+    font-weight: bold;
+    color: #111;
     background-color: #edeae5;
+    z-index: 1;
 }
 
 .content-exchange .view-list-name .view-left .view .box {
@@ -364,6 +371,12 @@
     width: 100%;
     height: 97%;
     margin-top: 20px;
+    color: #111;
+}
+
+.content-exchange .view-list-name .view-left .view .box h3 {
+    font-weight: 600;
+    color: #111;
 }
 
 .content-exchange .view-list-name .view-left .view .detail {
@@ -390,10 +403,13 @@
     padding-left: 30px;
 }
 
+.content-exchange .view-list-name .view-left .view .detail .button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
 .content-exchange .view-list-name .view-left .view .detail .button-select {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
     transition: all 0.4s ease-in-out;
 }
 
@@ -402,9 +418,6 @@
 }
 
 .content-exchange .view-list-name .view-left .view .detail .button-cancel {
-    position: absolute;
-    left: 40px;
-    bottom: 40px;
     transition: all 0.4s ease-in-out;
 }
 
@@ -419,20 +432,21 @@
 
 .content-exchange .view-list-name .view-left .content-view .list-comment {
     position: absolute;
-    left: 0;
     display: grid;
     grid-template-columns: auto;
     height: 20px;
-    margin-top:20px;
-    padding-left: 20px;
+    text-align: left;
+    margin-top: 20px;
+    left: 30px;
 }
 
-.content-exchange .view-list-name .view-left .content-view .list-comment p {
+.content-exchange .view-list-name .view-left .content-view .list-comment h2 {
     color: #111;
     font-weight: 400;
 }
 
 .content-exchange .view-list-name .list-right {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -447,15 +461,22 @@
     width: 80%;
     height: 80%;
     border: 1px solid #111;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
-.content-exchange .view-list-name .list-right .content-list h3 {
+.content-exchange .view-list-name .list-right .content-list::-webkit-scrollbar {
+    display: none;
+}
+
+.content-exchange .view-list-name .list-right h3 {
     position: absolute;
-    top: -15px;
+    top: 45px;
     width: 140px;
     color: #111;
     font-weight: bold;
     background-color: #edeae5;
+    z-index: 1;
 }
 
 .content-exchange .view-list-name .list-right .content-list .list-name {
@@ -463,6 +484,7 @@
     left: 0;
     display: grid;
     grid-template-columns: auto;
+    gap: 20px;
     width: 100%;
     height: 40px;
     margin-top:20px;

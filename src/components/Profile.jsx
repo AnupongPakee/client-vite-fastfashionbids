@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 // Import Data
-import { read, update } from "../../api/user";
+import { viewProfile, editProfile } from "../../api/user";
 
 // Import Style Css
 import "../css/profile.css";
@@ -36,7 +36,7 @@ function Profile() {
   }, [params.id]);
 
   const loadData = (id) => {
-    read(id)
+    viewProfile(id)
       .then((res) => {
         setData(res.data.data[0]);
         setFileOld(res.data.file);
@@ -69,12 +69,12 @@ function Profile() {
       formWithImage.append(key, data[key]);
     }
     formWithImage.append("img", fileold);
-    update(params.id, formWithImage).then((res) => {
+    editProfile(params.id, formWithImage).then((res) => {
       if (res.data.message == "success") {
         alert("Edit Profile Success");
         navigate("/home/" + params.id);
       } else {
-        alert("Error");
+        alert("Please upload image");
       }
     });
   };
@@ -109,6 +109,7 @@ function Profile() {
                   name="img"
                   id="img"
                   onChange={(e) => handleChange(e)}
+                  required
                 />
               </div>{" "}
               <br />
