@@ -311,7 +311,7 @@ function Exchange() {
                       />
                     </div>
                     <div className="label">
-                      <label htmlFor="color">Color Name:</label>
+                      <label htmlFor="color">Color:</label>
                       <input
                         type="text"
                         id="color"
