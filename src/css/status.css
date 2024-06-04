@@ -68,8 +68,6 @@
 }
 
 .container-status .show-status {
-    display: flex;
-    justify-content: space-between;
     width: 60%;
     height: 80%;
     text-align: left;
@@ -77,10 +75,44 @@
     border: 1px solid #111;
     margin-left: 40px;
     padding: 20px;
+    text-align: left;
 }
 
 .container-status .show-status p {
     font-size: 1rem;
     font-weight: 500;
     color: #111;
+}
+
+.container-status .show-status i {
+    color: #ff0000;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.container-status .show-status i:hover {
+    color: #7a0808;
+}
+
+.container-status .show-status .text {
+    display: flex;
+    width: 100%;
+}
+
+.container-status .show-status form {
+    display: none;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.container-status .show-status input {
+    border: none;
+    border-bottom: 1px solid #111;
+    background: none;
+    font-weight: bold;
+    outline: none;
+}
+
+.container-status .show-status button {
+    margin: 0 20px;
 }

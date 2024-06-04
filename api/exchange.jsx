@@ -30,10 +30,14 @@ export const deleteExchange = async (id, id_ex) =>
     import.meta.env.VITE_API_MYSQL + "/" + id + "/removeexchange/" + id_ex
   );
 
+export const deleteExchangeAll = async (id_exchange, id_store) =>
+  await axios.delete(
+    import.meta.env.VITE_API_MYSQL + "/delid/" + id_exchange + "/" + id_store
+  );
+
 export const readExchangeOne = async (id) => {
   return await axios.get(import.meta.env.VITE_API_MYSQL + "/detail/" + id);
 };
 
-export const sendId = async (id) => {
-  return await axios.put(import.meta.env.VITE_API_MYSQL + "/success/" + id);
-};
+export const sendId = async (id, data) =>
+  await axios.post(import.meta.env.VITE_API_MYSQL + "/success/" + id, data);

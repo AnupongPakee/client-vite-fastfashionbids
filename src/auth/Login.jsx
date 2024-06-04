@@ -88,6 +88,7 @@ function Login() {
                   id="username"
                   onChange={(e) => handleChange(e)}
                   placeholder="Username"
+                  required
                 />
               </div>{" "}
               <br />
@@ -101,6 +102,7 @@ function Login() {
                   id="password"
                   onChange={(e) => handleChange(e)}
                   placeholder="Password"
+                  required
                 />
                 <i
                   className="fa-regular fa-eye"

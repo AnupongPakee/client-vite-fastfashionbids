@@ -138,7 +138,7 @@ function Mystore() {
                 </div>
                 <div className="box">
                   <NavLink style={ActiveNavLink} to={"/my/status/" + params.id}>
-                    Status
+                    History
                   </NavLink>
                 </div>
               </div>
@@ -155,6 +155,7 @@ function Mystore() {
                         id="name"
                         onChange={(e) => handleChange(e)}
                         placeholder="Type here"
+                        required
                       />
                     </div>
                     <div className="label">
@@ -165,6 +166,7 @@ function Mystore() {
                         id="brand"
                         onChange={(e) => handleChange(e)}
                         placeholder="Brand Name"
+                        required
                       />
                     </div>
                     <div className="label">
@@ -175,6 +177,7 @@ function Mystore() {
                         id="color"
                         onChange={(e) => handleChange(e)}
                         placeholder="Type here"
+                        required
                       />
                     </div>
                     <div className="label">
@@ -186,6 +189,7 @@ function Mystore() {
                         id="detail"
                         onChange={(e) => handleChange(e)}
                         placeholder="Type here"
+                        required
                       />
                     </div>
                     <div className="label">
@@ -197,6 +201,7 @@ function Mystore() {
                         name="store_img"
                         id="image"
                         onChange={(e) => handleChange(e)}
+                        required
                       />
                     </div>
                     <div className="label">
@@ -205,6 +210,7 @@ function Mystore() {
                         name="id_size"
                         id="id_size"
                         onChange={(e) => handleChange(e)}
+                        required
                       >
                         <option value="null" defaultValue={"null"}>
                           Pleasse Select
@@ -230,6 +236,7 @@ function Mystore() {
                         id="id_sex"
                         defaultValue={"null"}
                         onChange={(e) => handleChange(e)}
+                        required
                       >
                         <option value="null">Please Select</option>
                         <option value="02e77254-1fc9-4e10-9913-716be2bc33db">
@@ -247,6 +254,7 @@ function Mystore() {
                         id="id_type"
                         defaultValue={"null"}
                         onChange={(e) => handleChange(e)}
+                        required
                       >
                         <option value="null">Please Select</option>
                         <option value="ce645324-96e0-4bac-a2d1-fa30252ee989">

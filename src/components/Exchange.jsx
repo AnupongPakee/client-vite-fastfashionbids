@@ -9,6 +9,7 @@ import {
   deleteExchange,
   readExchangeOne,
   sendId,
+  deleteExchangeAll,
 } from "../../api/exchange";
 import { readList } from "../../api/listexchange";
 import { readComment } from "../../api/comment";
@@ -71,6 +72,7 @@ function Exchange() {
     readExchangeOne(id)
       .then((res) => {
         setDetail(res.data.data[0]);
+        console.log(res.data.data);
       })
       .catch((err) => console.log(err));
   };
@@ -124,10 +126,28 @@ function Exchange() {
       .catch((err) => console.log(err));
   };
 
-  const SendIdstore = (id) => {
-    sendId(id)
+  const sendIdLocal = (id) => {
+    localStorage.setItem("id_st", id);
+    const history_data = {
+      h_fname: detail.fname,
+      h_lname: detail.lname,
+      h_store_name: detail.store_name,
+      h_address: detail.address,
+      tel: detail.tel,
+      id_me: detail.id
+    };
+    sendId(params.id, history_data)
+      .then((res) => {
+        console.log("success");
+      })
+      .catch((err) => console.log(err));
+    const id_ex = localStorage.getItem("id_ex");
+    const id_st = localStorage.getItem("id_st");
+    deleteExchangeAll(id_ex, id_st)
       .then((res) => {
         alert("Success");
+        localStorage.clear();
+        loadData();
       })
       .catch((err) => console.log(err));
   };
@@ -155,6 +175,7 @@ function Exchange() {
     if (check == "show") {
       document.getElementById("detail").style.width = "100%";
       document.getElementById("detail").style.display = "flex";
+      localStorage.setItem("id_ex", id);
       loadListname(id);
       loadComment(id);
     } else if (check == "cancel") {
@@ -221,8 +242,9 @@ function Exchange() {
                           Cancel
                         </button>
                         <button
+                          type="submit"
                           className="button-select"
-                          onClick={() => SendIdstore(detail.id_store)}
+                          onClick={() => sendIdLocal(detail.id_store)}
                         >
                           Select
                         </button>
@@ -286,7 +308,7 @@ function Exchange() {
                 </div>
                 <div className="box">
                   <NavLink style={ActiveNavLink} to={"/my/status/" + params.id}>
-                    Status
+                    History
                   </NavLink>
                 </div>
               </div>
@@ -303,6 +325,7 @@ function Exchange() {
                         name="exchange_name"
                         onChange={(e) => handleChange(e)}
                         placeholder="Type here"
+                        required
                       />
                     </div>
                     <div className="label">
@@ -313,6 +336,7 @@ function Exchange() {
                         name="exchange_brand"
                         onChange={(e) => handleChange(e)}
                         placeholder="Brand Name"
+                        required
                       />
                     </div>
                     <div className="label">
@@ -323,6 +347,7 @@ function Exchange() {
                         name="exchange_color"
                         onChange={(e) => handleChange(e)}
                         placeholder="Type here"
+                        required
                       />
                     </div>
                     <div className="label">
@@ -334,6 +359,7 @@ function Exchange() {
                         id="detail"
                         onChange={(e) => handleChange(e)}
                         placeholder="Type here"
+                        required
                       />
                     </div>
                     <div className="label want">
@@ -345,6 +371,7 @@ function Exchange() {
                         id="want"
                         onChange={(e) => handleChange(e)}
                         placeholder="Type here"
+                        required
                       />
                     </div>
                     <div className="label">
@@ -356,6 +383,7 @@ function Exchange() {
                         name="exchange_img"
                         onChange={(e) => handleChange(e)}
                         id="image"
+                        required
                       />
                     </div>
                     <div className="label">
@@ -364,6 +392,7 @@ function Exchange() {
                         name="id_size"
                         id="id_size"
                         onChange={(e) => handleChange(e)}
+                        required
                       >
                         <option value="null" defaultValue={"null"}>
                           Pleasse Select
@@ -389,6 +418,7 @@ function Exchange() {
                         id="id_sex"
                         defaultValue={"null"}
                         onChange={(e) => handleChange(e)}
+                        required
                       >
                         <option value="null">Please Select</option>
                         <option value="02e77254-1fc9-4e10-9913-716be2bc33db">
@@ -406,6 +436,7 @@ function Exchange() {
                         id="id_type"
                         defaultValue={"null"}
                         onChange={(e) => handleChange(e)}
+                        required
                       >
                         <option value="null">Please Select</option>
                         <option value="ce645324-96e0-4bac-a2d1-fa30252ee989">

@@ -417,6 +417,10 @@
     background-color: #00b300;
 }
 
+.content-exchange .view-list-name .view-left .view .detail form input[type="text"] {
+    display: none;
+}
+
 .content-exchange .view-list-name .view-left .view .detail .button-cancel {
     transition: all 0.4s ease-in-out;
 }

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 // Import Data
-import { viewExchange } from "../../api/exchange";
+import { viewExchange, sendId } from "../../api/exchange";
 import { readStore } from "../../api/store";
 import { addList, readList } from "../../api/listexchange";
 import { addComment, readComment } from "../../api/comment";
@@ -42,6 +42,7 @@ function Viewexchange() {
     viewExchange(id_ex, id)
       .then((res) => {
         setData(res.data.exchange[0]);
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };
@@ -86,11 +87,23 @@ function Viewexchange() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const history_data = {
+      h_fname: data.fname,
+      h_lname: data.lname,
+      h_store_name: data.exchange_name,
+      h_address: data.address,
+      tel: data.tel
+    };
+    sendId(id, history_data)
+      .then((res) => {
+        console.log("Add success");
+      })
+      .catch((err) => console.log(err))
     addList(id, id_ex, form)
       .then((res) => {
         if (res.data.message == "Store added successfully") {
-          alert("Add List Success");
           loadListname(id);
+          alert("Add List Success");
         } else if (res.data.message == "This id has already posted") {
           alert("This id has already posted");
         }
@@ -143,6 +156,7 @@ function Viewexchange() {
                       id="id_store"
                       onChange={(e) => handleChange(e)}
                       defaultValue={"null"}
+                      required
                     >
                       <option value="null">Please Select</option>
                       {mystore.map((item, index) => {

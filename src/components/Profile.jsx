@@ -16,7 +16,6 @@ import { useNavigate, useParams } from "react-router-dom";
 function Profile() {
   const [loading, setLoading] = useState(false);
   const [fileold, setFileOld] = useState();
-  // const [form, setForm] = useState({});
   const [data, setData] = useState({
     img: "",
     fname: "",

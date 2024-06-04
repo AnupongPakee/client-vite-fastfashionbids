@@ -8,6 +8,7 @@ import Menu from "../tools/Menuauth";
 
 // Import Data
 import { getAddr } from "../../api/exchange";
+import { addReport } from "../../api/report";
 
 // Import Package
 import { HashLoader } from "react-spinners";
@@ -16,6 +17,7 @@ import { NavLink, useParams } from "react-router-dom";
 function Status() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
+  const [form, setForm] = useState({});
   const params = useParams();
 
   useEffect(() => {
@@ -34,11 +36,37 @@ function Status() {
       .catch((err) => console.log(err));
   };
 
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(form);
+    addReport(data.id_user, data.id_me, form)
+      .then((res) => {
+        console.log("add report success");
+        alert("Add report success")
+      })
+      .catch((err) => console.log(err));
+  };
+
   const ActiveNavLink = ({ isActive }) => {
     return {
       backgroundColor: isActive ? "#111" : "#edeae5",
       color: isActive ? "#edeae5" : "#111",
     };
+  };
+
+  const showForm = (check) => {
+    if (check == "show") {
+      document.getElementById("form").style.display = "flex";
+    } else {
+      document.getElementById("form").style.display = "none";
+    }
   };
   return (
     <div className="container-status">
@@ -69,14 +97,48 @@ function Status() {
                 </div>
                 <div className="box">
                   <NavLink style={ActiveNavLink} to={"/my/status/" + params.id}>
-                    Status
+                    History
                   </NavLink>
                 </div>
               </div>
             </div>
             <div className="show-status">
-              <p>1. {data.fname} {data.lname} {data.tel}</p>
-              <p>Address: {data.address}</p>
+              <div
+                className="text"
+                style={{ display: "flex", justifyContent: "space-around" }}
+              >
+                <p>
+                  Name <br /> {data.h_fname} {data.h_lname}
+                </p>
+                <p>
+                  Tel <br /> {data.tel}
+                </p>
+                <p>
+                  Address <br /> {data.h_address}
+                </p>
+                <p>
+                  Product name <br /> {data.h_store_name}
+                </p>
+                <p>
+                  Report <br />{" "}
+                  <i
+                    className="fa-solid fa-flag"
+                    onClick={() => showForm("show")}
+                  ></i>
+                </p>
+              </div>
+              <form onSubmit={handleSubmit} id="form">
+                <input
+                  type="text"
+                  name="content"
+                  onChange={(e) => handleChange(e)}
+                  placeholder="Report"
+                />
+                <button type="reset" onClick={() => showForm("cancel")}>
+                  Cancel
+                </button>
+                <button type="submit">Submit</button>
+              </form>
             </div>
           </div>
         </div>

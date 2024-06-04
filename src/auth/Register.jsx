@@ -106,6 +106,7 @@ function Register() {
                   id="username"
                   onChange={(e) => handleChange(e)}
                   placeholder="Username"
+                  required
                 />
               </div>{" "}
               <br />
@@ -119,6 +120,7 @@ function Register() {
                   id="password"
                   onChange={(e) => handleChange(e)}
                   placeholder="Password"
+                  required
                 />
                 <i
                   className="fa-regular fa-eye"
@@ -143,6 +145,7 @@ function Register() {
                   id="password-confirm"
                   onChange={(e) => handleChange(e)}
                   placeholder="Confirm"
+                  required
                 />
                 <i
                   className="fa-regular fa-eye"
@@ -167,6 +170,7 @@ function Register() {
                   id="email"
                   onChange={(e) => handleChange(e)}
                   placeholder="Email"
+                  required
                 />
               </div>
               <br />
