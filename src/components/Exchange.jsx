@@ -134,7 +134,7 @@ function Exchange() {
       h_store_name: detail.store_name,
       h_address: detail.address,
       tel: detail.tel,
-      id_me: localStorage.getItem("id_me")
+      id_me: detail.id
     };
     sendId(params.id, history_data)
       .then((res) => {
@@ -172,7 +172,6 @@ function Exchange() {
   };
 
   const showDetail = (check, id) => {
-    localStorage.setItem("id_me", id);
     if (check == "show") {
       document.getElementById("detail").style.width = "100%";
       document.getElementById("detail").style.display = "flex";
