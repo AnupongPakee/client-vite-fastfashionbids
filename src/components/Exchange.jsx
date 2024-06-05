@@ -184,10 +184,10 @@ function Exchange() {
   };
 
   const showView = (check, id) => {
+    loadDetail(id);
     if (check == "show") {
       document.getElementById("content-view").style.display = "none";
       document.getElementById("view").style.display = "flex";
-      loadDetail(id);
     } else if (check == "cancel") {
       document.getElementById("content-view").style.display = "flex";
       document.getElementById("view").style.display = "none";

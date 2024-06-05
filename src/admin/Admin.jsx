@@ -39,8 +39,8 @@ function Admin() {
   const loadReport = (id_me) => {
     readReport(id_me)
       .then((res) => {
-        setReport(res.data.meReport[0]);
-        setMeReport(res.data.userReport[0]);
+        setReport(res.data.meReport[0] || "");
+        setMeReport(res.data.userReport[0] || "");
       })
       .catch((err) => console.log(err));
   };
@@ -69,6 +69,12 @@ function Admin() {
       document.getElementById("h2").style.opacity = "1";
     }
   };
+
+  const showH3sc = (check) => {
+    if (check == "show") {
+      document.getElementById("h3-sc").innerHTML = "Status: Success";
+    }
+  };
   return (
     <div className="container-admin">
       {loading ? (
@@ -89,11 +95,17 @@ function Admin() {
               <div className="report" id="report">
                 <div className="content-report">
                   <h3>Report</h3> <br /> <br />
-                  <h3>User: {report.username} Reported {mereport.username}</h3> <br />
-                  <h3>Detail: {mereport.content}</h3> <br /> <br />
+                  <h3>
+                    User: {report.username} Reported {mereport.username}
+                  </h3>{" "}
+                  <br />
+                  <h3>Detail: {mereport.content}</h3> <br />
+                  <h3 id="h3-sc">Status: in progress</h3>
                   <div className="button">
-                    <button type="reset" onClick={() => showReport("cancel")}>Cancel</button>
-                    <button onClick={() => handleRemove(mereport.id_me)}>Delete</button>
+                    <button type="reset" onClick={() => showReport("cancel")}>
+                      Cancel
+                    </button>
+                    <button onClick={() => showH3sc("show")}>Confirm</button>
                   </div>
                 </div>
               </div>
