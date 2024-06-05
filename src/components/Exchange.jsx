@@ -70,10 +70,9 @@ function Exchange() {
 
   const loadDetail = (id) => {
     readExchangeOne(id)
-    .then((res) => {
-      setDetail(res.data.data[0]);
-      console.log(res.data.data);
-      console.log(detail.id);
+      .then((res) => {
+        setDetail(res.data.data[0]);
+        console.log(res.data.data);
       })
       .catch((err) => console.log(err));
   };
@@ -135,7 +134,7 @@ function Exchange() {
       h_store_name: detail.store_name,
       h_address: detail.address,
       tel: detail.tel,
-      id_me: detail.id
+      id_me: localStorage.getItem("id_me")
     };
     sendId(params.id, history_data)
       .then((res) => {
@@ -173,6 +172,7 @@ function Exchange() {
   };
 
   const showDetail = (check, id) => {
+    localStorage.setItem("id_me", id);
     if (check == "show") {
       document.getElementById("detail").style.width = "100%";
       document.getElementById("detail").style.display = "flex";
@@ -188,7 +188,6 @@ function Exchange() {
     if (check == "show") {
       document.getElementById("content-view").style.display = "none";
       document.getElementById("view").style.display = "flex";
-      console.log(id);
       loadDetail(id);
     } else if (check == "cancel") {
       document.getElementById("content-view").style.display = "flex";

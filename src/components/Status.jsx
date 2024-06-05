@@ -20,17 +20,6 @@ function Status() {
   const [form, setForm] = useState({});
   const params = useParams();
 
-  const defaultData = [
-    {
-      h_fname: "",
-      h_lname: "",
-      h_store_name: "",
-      h_address: "",
-      tel: "",
-      id_user: ""
-    }
-  ]
-
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -42,12 +31,7 @@ function Status() {
   const loadData = () => {
     getAddr(params.id)
       .then((res) => {
-        if (res.data.data.length > 0) {
-          setData(res.data.data[0]);
-          console.log(res.data.data[0]);
-        } else {
-          setData(defaultData);
-        }
+        setData(res.data.data[0]);
       })
       .catch((err) => console.log(err));
   };
