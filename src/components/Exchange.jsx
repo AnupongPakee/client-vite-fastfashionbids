@@ -70,9 +70,10 @@ function Exchange() {
 
   const loadDetail = (id) => {
     readExchangeOne(id)
-      .then((res) => {
-        setDetail(res.data.data[0]);
-        console.log(res.data.data);
+    .then((res) => {
+      setDetail(res.data.data[0]);
+      console.log(res.data.data);
+      console.log(detail.id);
       })
       .catch((err) => console.log(err));
   };
@@ -187,6 +188,7 @@ function Exchange() {
     if (check == "show") {
       document.getElementById("content-view").style.display = "none";
       document.getElementById("view").style.display = "flex";
+      console.log(id);
       loadDetail(id);
     } else if (check == "cancel") {
       document.getElementById("content-view").style.display = "flex";
